@@ -13,7 +13,19 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
+  @override
+  void initState() {
+    WidgetsBinding.instance.addObserver(this);
+    UiTema.definirTema();
+    super.initState();
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    UiTema.definirTema();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
