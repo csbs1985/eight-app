@@ -16,7 +16,9 @@ class UiTema {
 
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
+        statusBarBrightness: isEscuro ? Brightness.light : Brightness.dark,
         statusBarColor: isEscuro ? UiCor.statusBarEscuro : UiCor.statusBar,
+        statusBarIconBrightness: isEscuro ? Brightness.light : Brightness.dark,
         systemNavigationBarColor:
             isEscuro ? UiCor.navigationBarEscuro : UiCor.navigationBar,
         systemNavigationBarIconBrightness:
@@ -30,7 +32,7 @@ class UiTema {
       elevation: 0,
       backgroundColor: UiCor.appBar,
     ),
-    brightness: Brightness.light,
+    fontFamily: 'nunito',
     scaffoldBackgroundColor: UiCor.back,
     textTheme: const TextTheme(
       titleMedium: UiTextoClaro.titleMedium,
@@ -44,7 +46,7 @@ class UiTema {
       elevation: 0,
       backgroundColor: UiCor.appBarEscuro,
     ),
-    brightness: Brightness.dark,
+    fontFamily: 'nunito',
     scaffoldBackgroundColor: UiCor.backEscuro,
     textTheme: const TextTheme(
       titleMedium: UiTextoEscuro.titleMedium,

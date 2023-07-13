@@ -34,9 +34,7 @@ flutter:
     - assets/font/
     - assets/icon/
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: nunito
+      fonts:
+        - asset: assets/font/nunito.ttf

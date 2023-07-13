@@ -1,5 +1,5 @@
 import 'package:eight_app/button/icone_button.dart';
-import 'package:eight_app/config/string_config.dart';
+import 'package:eight_app/config/texto_config.dart';
 import 'package:eight_app/theme/ui_icone.dart';
 import 'package:eight_app/theme/ui_espaco.dart';
 import 'package:flutter/material.dart';
@@ -64,6 +64,7 @@ class _EntrarPageState extends State<EntrarPage> {
               child: IconeButton(
                 callback: () => {},
                 icone: UiIcone.google,
+                size: 40,
               ),
             ),
             const SizedBox(height: UiEspaco.grande),
