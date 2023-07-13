@@ -1,8 +1,10 @@
-import 'package:eight_app/page/inicio_page.dart';
+import 'package:eight_app/config/rotas_config.dart';
 import 'package:eight_app/theme/ui_tema.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
 }
 
@@ -28,11 +30,13 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: UiTema.tema,
       darkTheme: UiTema.temaEscuro,
-      home: const InicioPage(),
+      routerDelegate: routes.routerDelegate,
+      routeInformationParser: routes.routeInformationParser,
+      routeInformationProvider: routes.routeInformationProvider,
     );
   }
 }

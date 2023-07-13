@@ -1,5 +1,6 @@
 import 'package:eight_app/config/value_notifier_config.dart';
 import 'package:eight_app/theme/ui_cor.dart';
+import 'package:eight_app/theme/ui_texto.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -31,6 +32,11 @@ class UiTema {
     ),
     brightness: Brightness.light,
     scaffoldBackgroundColor: UiCor.back,
+    textTheme: const TextTheme(
+      titleMedium: UiTextoClaro.titleMedium,
+      bodyMedium: UiTextoClaro.bodyMedium,
+      bodySmall: UiTextoClaro.bodySmall,
+    ),
   );
 
   static ThemeData temaEscuro = ThemeData(
@@ -40,5 +46,10 @@ class UiTema {
     ),
     brightness: Brightness.dark,
     scaffoldBackgroundColor: UiCor.backEscuro,
+    textTheme: const TextTheme(
+      titleMedium: UiTextoEscuro.titleMedium,
+      bodyMedium: UiTextoEscuro.bodyMedium,
+      bodySmall: UiTextoEscuro.bodySmall,
+    ),
   );
 }
