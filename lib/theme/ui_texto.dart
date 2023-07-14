@@ -2,8 +2,8 @@ import 'package:eight_app/theme/ui_cor.dart';
 import 'package:flutter/material.dart';
 
 class UiTexto {
-  static const TextStyle titleMedium = TextStyle(
-    fontSize: 16,
+  static const TextStyle titleSmall = TextStyle(
+    fontSize: 24,
     fontWeight: FontWeight.normal,
     color: UiCor.principal,
   );

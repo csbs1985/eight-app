@@ -1,9 +1,15 @@
+import 'package:eight_app/config/hive_config.dart';
 import 'package:eight_app/config/rotas_config.dart';
 import 'package:eight_app/theme/ui_tema.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await HiveConfig.start();
+
+  await Firebase.initializeApp();
 
   runApp(const MyApp());
 }

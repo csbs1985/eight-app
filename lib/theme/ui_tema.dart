@@ -35,9 +35,10 @@ class UiTema {
     fontFamily: 'machine',
     scaffoldBackgroundColor: UiCor.back,
     textTheme: const TextTheme(
-      titleMedium: UiTextoClaro.titleMedium,
       bodyMedium: UiTextoClaro.bodyMedium,
       bodySmall: UiTextoClaro.bodySmall,
+      titleMedium: UiTextoClaro.titleMedium,
+      titleSmall: UiTexto.titleSmall,
     ),
   );
 
@@ -49,9 +50,10 @@ class UiTema {
     fontFamily: 'machine',
     scaffoldBackgroundColor: UiCor.backEscuro,
     textTheme: const TextTheme(
-      titleMedium: UiTextoEscuro.titleMedium,
       bodyMedium: UiTextoEscuro.bodyMedium,
       bodySmall: UiTextoEscuro.bodySmall,
+      titleMedium: UiTextoEscuro.titleMedium,
+      titleSmall: UiTexto.titleSmall,
     ),
   );
 }
