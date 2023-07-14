@@ -10,11 +10,6 @@ class UiTexto {
 }
 
 class UiTextoClaro {
-  static const TextStyle titleMedium = TextStyle(
-    fontSize: 32,
-    fontWeight: FontWeight.normal,
-    color: UiCor.texto,
-  );
   static const TextStyle bodyMedium = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,
@@ -22,17 +17,22 @@ class UiTextoClaro {
   );
   static const TextStyle bodySmall = TextStyle(
     fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: UiCor.texto,
+  );
+  static const TextStyle titleMedium = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.normal,
+    color: UiCor.texto,
+  );
+  static const TextStyle titleSmall = TextStyle(
+    fontSize: 24,
     fontWeight: FontWeight.normal,
     color: UiCor.texto,
   );
 }
 
 class UiTextoEscuro {
-  static const TextStyle titleMedium = TextStyle(
-    fontSize: 32,
-    fontWeight: FontWeight.normal,
-    color: UiCor.textoEscuro,
-  );
   static const TextStyle bodyMedium = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,
@@ -40,6 +40,16 @@ class UiTextoEscuro {
   );
   static const TextStyle bodySmall = TextStyle(
     fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: UiCor.textoEscuro,
+  );
+  static const TextStyle titleMedium = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.normal,
+    color: UiCor.textoEscuro,
+  );
+  static const TextStyle titleSmall = TextStyle(
+    fontSize: 24,
     fontWeight: FontWeight.normal,
     color: UiCor.textoEscuro,
   );

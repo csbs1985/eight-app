@@ -38,7 +38,7 @@ class UiTema {
       bodyMedium: UiTextoClaro.bodyMedium,
       bodySmall: UiTextoClaro.bodySmall,
       titleMedium: UiTextoClaro.titleMedium,
-      titleSmall: UiTexto.titleSmall,
+      titleSmall: UiTextoClaro.titleSmall,
     ),
   );
 
@@ -53,7 +53,7 @@ class UiTema {
       bodyMedium: UiTextoEscuro.bodyMedium,
       bodySmall: UiTextoEscuro.bodySmall,
       titleMedium: UiTextoEscuro.titleMedium,
-      titleSmall: UiTexto.titleSmall,
+      titleSmall: UiTextoEscuro.titleSmall,
     ),
   );
 }

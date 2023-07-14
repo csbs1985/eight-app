@@ -12,8 +12,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  cached_network_image: ^3.2.3
   firebase_auth: ^4.6.3
   firebase_core: ^2.14.0
   flutter_launcher_icons: ^0.13.1
@@ -38,6 +37,7 @@ flutter:
     - assets/app/
     - assets/font/
     - assets/icon/
+    - assets/image/
 
   fonts:
     - family: machine

@@ -1,4 +1,5 @@
 import 'package:eight_app/appbar/inicio_appBar.dart';
+import 'package:eight_app/button/historia_button.dart';
 import 'package:eight_app/list/historia_list.dart';
 import 'package:eight_app/theme/ui_tamanho.dart';
 import 'package:flutter/material.dart';
@@ -45,10 +46,8 @@ class _InicioPageState extends State<InicioPage> {
           SliverList(
             delegate: SliverChildListDelegate(
               [
+                const HistoriaButton(),
                 const HistoriaList(),
-                Container(
-                  height: 10000,
-                )
               ],
             ),
           ),
