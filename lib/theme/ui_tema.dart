@@ -32,7 +32,7 @@ class UiTema {
       elevation: 0,
       backgroundColor: UiCor.appBar,
     ),
-    fontFamily: 'nunito',
+    fontFamily: 'machine',
     scaffoldBackgroundColor: UiCor.back,
     textTheme: const TextTheme(
       titleMedium: UiTextoClaro.titleMedium,
@@ -46,7 +46,7 @@ class UiTema {
       elevation: 0,
       backgroundColor: UiCor.appBarEscuro,
     ),
-    fontFamily: 'nunito',
+    fontFamily: 'machine',
     scaffoldBackgroundColor: UiCor.backEscuro,
     textTheme: const TextTheme(
       titleMedium: UiTextoEscuro.titleMedium,
