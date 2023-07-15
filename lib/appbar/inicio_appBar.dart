@@ -39,7 +39,7 @@ class _InicioAppBarState extends State<InicioAppBar> {
 
                   return SvgPicture.asset(
                     isEscuro ? UiIcone.eightEscuro : UiIcone.eight,
-                    height: 24,
+                    height: 20,
                   );
                 },
               ),

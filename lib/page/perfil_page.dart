@@ -15,9 +15,16 @@ class PerfilPage extends StatefulWidget {
 class _PerfilPageState extends State<PerfilPage> {
   @override
   Widget build(BuildContext context) {
+    print(widget._idUsuario);
+
     return Scaffold(
       appBar: AppBar(),
-      body: const SingleChildScrollView(),
+      body: SingleChildScrollView(
+        child: Container(
+          height: 300,
+          color: Colors.amber,
+        ),
+      ),
     );
   }
 }

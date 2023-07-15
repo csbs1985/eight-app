@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:eight_app/config/hive_config.dart';
 import 'package:eight_app/config/rotas_config.dart';
 import 'package:eight_app/theme/ui_tema.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,6 +13,10 @@ Future<void> main() async {
   await HiveConfig.start();
 
   await Firebase.initializeApp();
+
+  SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+  );
 
   runApp(const MyApp());
 }
@@ -36,13 +43,16 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      routerDelegate: routes.routerDelegate,
-      routeInformationParser: routes.routeInformationParser,
-      routeInformationProvider: routes.routeInformationProvider,
-      theme: UiTema.tema,
-      darkTheme: UiTema.temaEscuro,
+    return WillPopScope(
+      onWillPop: () => exit(0),
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        routerDelegate: routes.routerDelegate,
+        routeInformationParser: routes.routeInformationParser,
+        routeInformationProvider: routes.routeInformationProvider,
+        theme: UiTema.tema,
+        darkTheme: UiTema.temaEscuro,
+      ),
     );
   }
 }

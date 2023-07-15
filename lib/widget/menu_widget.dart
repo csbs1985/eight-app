@@ -15,7 +15,7 @@ class MenuWidget extends StatefulWidget {
 class _MenuWidgetState extends State<MenuWidget> {
   final TextoService _textoService = TextoService();
 
-  bool _podeMostrar(CategoriaModel item) {
+  bool _isMostrar(CategoriaModel item) {
     return item.isDesabilitada ? false : true;
   }
 
@@ -38,28 +38,34 @@ class _MenuWidgetState extends State<MenuWidget> {
         itemCount: listaCategoria.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext context, int index) {
-          return _podeMostrar(listaCategoria[index])
-              ? Container(
-                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-                  decoration: BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                        color: _itemSelecionado(listaCategoria[index])
-                            ? Theme.of(context).colorScheme.onTertiary
-                            : Theme.of(context).colorScheme.onSecondary,
-                        width: 1, // Espessura da borda
+          return _isMostrar(listaCategoria[index])
+              ? ValueListenableBuilder(
+                  valueListenable: currentTema,
+                  builder: (context, tema, _) {
+                    return Container(
+                      padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: _itemSelecionado(listaCategoria[index])
+                                ? Theme.of(context).colorScheme.onTertiary
+                                : Theme.of(context).colorScheme.onSecondary,
+                            width: 1, // Espessura da borda
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  child: GestureDetector(
-                    child: Center(
-                      child: Text(
-                        _textoService.capitalize(listaCategoria[index].texto),
-                        style: Theme.of(context).textTheme.bodyMedium,
+                      child: GestureDetector(
+                        child: Center(
+                          child: Text(
+                            _textoService
+                                .capitalize(listaCategoria[index].texto),
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        ),
+                        onTap: () => _selecionarItem(listaCategoria[index]),
                       ),
-                    ),
-                    onTap: () => _selecionarItem(listaCategoria[index]),
-                  ),
+                    );
+                  },
                 )
               : Container();
         },
