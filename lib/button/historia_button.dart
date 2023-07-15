@@ -1,6 +1,16 @@
 import 'package:eight_app/button/avatar_button.dart';
+import 'package:eight_app/config/texto_config.dart';
+import 'package:eight_app/config/value_notifier_config.dart';
+import 'package:eight_app/modal/historia_modal.dart';
+import 'package:eight_app/service/historia_service.dart';
+import 'package:eight_app/service/rotas_service.dart';
+import 'package:eight_app/theme/ui_borda.dart';
+import 'package:eight_app/theme/ui_cor.dart';
+import 'package:eight_app/theme/ui_espaco.dart';
 import 'package:eight_app/theme/ui_tamanho.dart';
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:go_router/go_router.dart';
 
 class HistoriaButton extends StatefulWidget {
   const HistoriaButton({super.key});
@@ -10,47 +20,56 @@ class HistoriaButton extends StatefulWidget {
 }
 
 class _HistoriaButtonState extends State<HistoriaButton> {
+  final HistoriaService _historiaService = HistoriaService();
+
+  void _abrirModal(BuildContext context) {
+    _historiaService.limparCurrentHistoria();
+
+    showCupertinoModalBottomSheet(
+      expand: true,
+      context: context,
+      barrierColor: UiCor.overlay,
+      duration: const Duration(milliseconds: 300),
+      builder: (context) => const HistoriaModal(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: UiTamanho.appBar,
-      // color: Colors.amber,
+      height: UiTamanho.appBar2,
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
       child: Row(
         children: [
           AvatarButton(
-            avatar:
-                "https://scontent.fcgh3-1.fna.fbcdn.net/v/t39.30808-6/355123013_2270093176713400_4613544828911410935_n.jpg?_nc_cat=107&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEUuyawvAQk18HqAEK04fJWIXgc-eft21sheBz55-3bWyQyqy8G1BE1SVfuqgUUbxySDTyCaz2za1xOfNUMqoQL&_nc_ohc=oWVsad2uqIoAX9VDKOS&_nc_ht=scontent.fcgh3-1.fna&oh=00_AfChoL8WhhTibr4NVbxlhwKKioo9LHDollJhk4J6x_ApPg&oe=64B6DC13",
-            callback: () => print("funciona!"),
+            avatar: currentUsuario.value.avatarUsuario,
+            callback: () => context.goNamed(RotasEnum.PERFIL.value,
+                pathParameters: {'idUsuario': "CC1XdGCfQkX3gMskl8S4XBRyIzn2"}),
           ),
-          const SizedBox(width: 8),
-          // Expanded(
-          //   child: ValueListenableBuilder(
-          //     valueListenable: currentTema,
-          //     builder: (BuildContext context, Brightness tema, _) {
-          //       bool isDark = tema == Brightness.dark;
-
-          //       return GestureDetector(
-          //         onTap: () => _abrirModal(context),
-          //         child: Container(
-          //           alignment: Alignment.centerLeft,
-          //           height: 40,
-          //           decoration: BoxDecoration(
-          //             color: isDark ? UiCor.bordaEscura : UiCor.borda,
-          //             borderRadius: BorderRadius.circular(UiBorda.circulo),
-          //           ),
-          //           child: Padding(
-          //             padding: const EdgeInsets.only(left: 16),
-          //             child: Text(
-          //               CRIAR_BOTAO,
-          //               style: Theme.of(context).textTheme.bodySmall,
-          //             ),
-          //           ),
-          //         ),
-          //       );
-          //     },
-          //   ),
-          // ),
+          const SizedBox(width: UiEspaco.pequeno),
+          Expanded(
+            child: GestureDetector(
+              onTap: () => _abrirModal(context),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                height: UiTamanho.input,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                  borderRadius: BorderRadius.circular(UiBorda.arredondada),
+                ),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Text(
+                      CRIAR_BOTAO,
+                      style: Theme.of(context).textTheme.labelSmall,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

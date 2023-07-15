@@ -20,6 +20,11 @@ class UiTextoClaro {
     fontWeight: FontWeight.normal,
     color: UiCor.texto,
   );
+  static const TextStyle labelSmall = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: UiCor.hint,
+  );
   static const TextStyle titleMedium = TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.normal,
@@ -42,6 +47,11 @@ class UiTextoEscuro {
     fontSize: 12,
     fontWeight: FontWeight.normal,
     color: UiCor.textoEscuro,
+  );
+  static const TextStyle labelSmall = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: UiCor.hintEscuro,
   );
   static const TextStyle titleMedium = TextStyle(
     fontSize: 32,

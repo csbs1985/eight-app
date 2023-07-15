@@ -10,6 +10,6 @@ class HistoriaList extends StatefulWidget {
 class _HistoriaListState extends State<HistoriaList> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container();
   }
 }

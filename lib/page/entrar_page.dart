@@ -1,6 +1,7 @@
-import 'package:eight_app/button/icone_button.dart';
 import 'package:eight_app/config/texto_config.dart';
+import 'package:eight_app/config/value_notifier_config.dart';
 import 'package:eight_app/service/auth_service.dart';
+import 'package:eight_app/theme/ui_borda.dart';
 import 'package:eight_app/theme/ui_icone.dart';
 import 'package:eight_app/theme/ui_espaco.dart';
 import 'package:flutter/material.dart';
@@ -48,9 +49,16 @@ class _EntrarPageState extends State<EntrarPage> {
           children: [
             const SizedBox(height: UiEspaco.normal),
             Expanded(
-              child: SvgPicture.asset(
-                UiIcone.eight,
-                width: MediaQuery.sizeOf(context).width / 2.5,
+              child: ValueListenableBuilder(
+                valueListenable: currentTema,
+                builder: (context, Brightness tema, _) {
+                  bool isEscuro = tema == Brightness.dark ? true : false;
+
+                  return SvgPicture.asset(
+                    isEscuro ? UiIcone.eightEscuro : UiIcone.eight,
+                    width: MediaQuery.sizeOf(context).width / 2.5,
+                  );
+                },
               ),
             ),
             Text(
@@ -64,12 +72,16 @@ class _EntrarPageState extends State<EntrarPage> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: UiEspaco.grande),
-            Center(
-              child: IconeButton(
-                callback: () => {},
-                icone: UiIcone.google,
-                size: 40,
+            InkWell(
+              borderRadius: BorderRadius.circular(UiBorda.circulo),
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: SvgPicture.asset(
+                  UiIcone.google,
+                  width: 40,
+                ),
               ),
+              onTap: () => {},
             ),
             const SizedBox(height: UiEspaco.grande),
             Text(

@@ -23,11 +23,12 @@ CustomTransitionPage transicaoPaginas<T>({
 }
 
 enum RotasEnum {
-  // DOAR('/doar'),
-  // HISTORICO('/historico'),
-
+  BUSCAR('/buscar'),
   ENTRAR('/entrar'),
-  INICIO('/inicio');
+  INICIO('/inicio'),
+  MENU('/menu'),
+  NOTIFICACAO('notificacao'),
+  PERFIL('perfil');
 
   final String value;
   const RotasEnum(this.value);

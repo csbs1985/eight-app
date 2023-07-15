@@ -2,6 +2,8 @@ import 'package:eight_app/appbar/inicio_appBar.dart';
 import 'package:eight_app/button/historia_button.dart';
 import 'package:eight_app/list/historia_list.dart';
 import 'package:eight_app/theme/ui_tamanho.dart';
+import 'package:eight_app/widget/configuracao_drawer.dart';
+import 'package:eight_app/widget/menu_widget.dart';
 import 'package:flutter/material.dart';
 
 class InicioPage extends StatefulWidget {
@@ -31,12 +33,14 @@ class _InicioPageState extends State<InicioPage> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(toolbarHeight: 0),
+      drawer: const ConfiguracaoDrawer(),
       body: CustomScrollView(
         controller: _scrollController,
         slivers: [
           SliverAppBar(
+            automaticallyImplyLeading: false,
             actions: [Container()],
-            toolbarHeight: UiTamanho.appBar,
+            toolbarHeight: UiTamanho.appBar2,
             floating: true,
             snap: true,
             flexibleSpace: FlexibleSpaceBar(
@@ -47,7 +51,9 @@ class _InicioPageState extends State<InicioPage> {
             delegate: SliverChildListDelegate(
               [
                 const HistoriaButton(),
+                const MenuWidget(),
                 const HistoriaList(),
+                Container(height: 10000)
               ],
             ),
           ),
