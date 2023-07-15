@@ -32,8 +32,10 @@ class UiTema {
     appBarTheme: const AppBarTheme(
       backgroundColor: UiCor.appBar,
       elevation: 0,
+      iconTheme: IconThemeData(color: UiCor.icone),
       toolbarHeight: UiTamanho.appBar,
     ),
+    brightness: Brightness.light,
     colorScheme: const ColorScheme.light(
       onPrimary: UiCor.input, // input
       onSecondary: UiCor.borda, // borda
@@ -55,8 +57,10 @@ class UiTema {
     appBarTheme: const AppBarTheme(
       backgroundColor: UiCor.appBarEscuro,
       elevation: 0,
+      iconTheme: IconThemeData(color: UiCor.iconeEscuro),
       toolbarHeight: UiTamanho.appBar,
     ),
+    brightness: Brightness.dark,
     colorScheme: const ColorScheme.dark(
       onPrimary: UiCor.inputEscuro, // input
       onSecondary: UiCor.bordaEscura, // borda

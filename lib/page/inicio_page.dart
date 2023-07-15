@@ -39,7 +39,6 @@ class _InicioPageState extends State<InicioPage> {
         slivers: [
           SliverAppBar(
             automaticallyImplyLeading: false,
-            actions: [Container()],
             toolbarHeight: UiTamanho.appBar2,
             floating: true,
             snap: true,

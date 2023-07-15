@@ -30,6 +30,7 @@ class _IconeButtonState extends State<IconeButton> {
         child: Icon(
           widget._icone,
           size: widget._size,
+          color: Theme.of(context).iconTheme.color,
         ),
       ),
       onTap: () => widget._callback(),

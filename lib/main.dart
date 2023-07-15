@@ -38,11 +38,11 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: UiTema.tema,
-      darkTheme: UiTema.temaEscuro,
       routerDelegate: routes.routerDelegate,
       routeInformationParser: routes.routeInformationParser,
       routeInformationProvider: routes.routeInformationProvider,
+      theme: UiTema.tema,
+      darkTheme: UiTema.temaEscuro,
     );
   }
 }
