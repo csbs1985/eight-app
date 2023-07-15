@@ -85,7 +85,7 @@ class _EntrarPageState extends State<EntrarPage> {
             ),
             const SizedBox(height: UiEspaco.grande),
             Text(
-              '$POR • v${_packageInfo.version}',
+              '$POR ${_packageInfo.version}',
               style: Theme.of(context).textTheme.bodySmall,
               textAlign: TextAlign.center,
             ),

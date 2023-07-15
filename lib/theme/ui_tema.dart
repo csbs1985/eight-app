@@ -40,6 +40,7 @@ class UiTema {
       onPrimary: UiCor.input, // input
       onSecondary: UiCor.borda, // borda
       onTertiary: UiCor.texto, // texto
+      onBackground: UiCor.skeleton, //skeleton
     ),
     iconTheme: const IconThemeData(color: UiCor.icone),
     primaryColor: UiCor.principal,
@@ -65,6 +66,7 @@ class UiTema {
       onPrimary: UiCor.inputEscuro, // input
       onSecondary: UiCor.bordaEscura, // borda
       onTertiary: UiCor.textoEscuro, // texto
+      onBackground: UiCor.skeletonEscuro, //skeleton
     ),
     iconTheme: const IconThemeData(color: UiCor.iconeEscuro),
     scaffoldBackgroundColor: UiCor.backEscuro,

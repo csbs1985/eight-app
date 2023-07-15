@@ -1,63 +1,69 @@
-// import 'package:eight_app/service/historia_service.dart';
-// import 'package:flutter/widgets.dart';
+import 'package:eight_app/service/categoria_service.dart';
+import 'package:eight_app/theme/ui_espaco.dart';
+import 'package:eight_app/widget/ellipsis_widget.dart';
+import 'package:flutter/material.dart';
 
-// class HistoriaListaWidget extends StatefulWidget {
-//   const HistoriaListaWidget({super.key});
+class HistoriaItem extends StatefulWidget {
+  const HistoriaItem({
+    super.key,
+    required Map<String, dynamic> snapshot,
+  }) : _historia = snapshot;
 
-//   @override
-//   State<HistoriaListaWidget> createState() => _HistoriaListaWidgetState();
-// }
+  final Map<String, dynamic> _historia;
 
-// class _HistoriaListaWidgetState extends State<HistoriaListaWidget> {
-//   final HistoriaService _historiaService = HistoriaService();
+  @override
+  State<HistoriaItem> createState() => _HistoriaItemState();
+}
 
-//   int index = 1;
+class _HistoriaItemState extends State<HistoriaItem> {
+  final CategoriaService _categoriaService = CategoriaService();
 
-//   @override
-//   void initState() {
-//     super.initState();
-//     // _historiaService.pegarHistoria();
-//   }
+  Future<void> _definirUsuario() async {}
 
-//   @override
-//   Widget build(BuildContext context) {
-//     double altura = MediaQuery.sizeOf(context).height - (UiTamanho.appbar * 4);
-
-//     return ValueListenableBuilder<CategoriaModel>(
-//       valueListenable: currentCategoria,
-//       builder: (BuildContext context, value, __) {
-//         return Column(
-//           children: [
-//             FirestoreListView(
-//               query: _historiaService.pegarHistoria(),
-//               pageSize: 10,
-//               shrinkWrap: true,
-//               reverse: true,
-//               physics: const NeverScrollableScrollPhysics(),
-//               loadingBuilder: (context) => const HistoriaItemSkeleton(),
-//               errorBuilder: (context, error, _) =>
-//                   ErroResultadoWidget(altura: altura),
-//               emptyBuilder: (context) => SemResultadoWidget(altura: altura),
-//               itemBuilder: (
-//                 BuildContext context,
-//                 QueryDocumentSnapshot<dynamic> snapshot,
-//               ) {
-//                 return AnimationConfiguration.staggeredList(
-//                   position: index++,
-//                   duration: const Duration(milliseconds: 375),
-//                   child: SlideAnimation(
-//                     verticalOffset: 50,
-//                     child: FadeInAnimation(
-//                       child: HistoriaItemWidget(snapshot: snapshot.data()),
-//                     ),
-//                   ),
-//                 );
-//               },
-//             ),
-//             const FimConteudoText(),
-//           ],
-//         );
-//       },
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<void>(
+      future: _definirUsuario(),
+      builder: (BuildContext context, _) {
+        return InkWell(
+          onTap: () => {},
+          child: Column(
+            children: [
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(UiEspaco.grande),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      widget._historia['titulo'],
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    const SizedBox(height: UiEspaco.pequeno),
+                    EllipsisText(texto: widget._historia['texto']),
+                    const SizedBox(height: UiEspaco.pequeno),
+                    Wrap(
+                      children: [
+                        for (var item in widget._historia['categorias'])
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(right: UiEspaco.pequeno),
+                            child: Text(
+                              "#${_categoriaService.pegarTextoCategoria(item)}",
+                              style: Theme.of(context).textTheme.bodySmall,
+                            ),
+                          ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              // const SeparadorWidget(),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}

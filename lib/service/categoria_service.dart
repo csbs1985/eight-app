@@ -1,4 +1,13 @@
-class CategoriaService {}
+import 'package:eight_app/lista/categoria_lista.dart';
+
+class CategoriaService {
+  String pegarTextoCategoria(String item) {
+    var categoria =
+        listaCategoria.firstWhere((element) => element.idCategoria == item);
+
+    return categoria.texto;
+  }
+}
 
 enum CategoriaEnum {
   ALL('all'),

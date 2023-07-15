@@ -52,7 +52,6 @@ class _InicioPageState extends State<InicioPage> {
                 const HistoriaButton(),
                 const MenuWidget(),
                 const HistoriaList(),
-                Container(height: 10000)
               ],
             ),
           ),

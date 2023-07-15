@@ -26,6 +26,9 @@ class UiCor {
 
   static const Color principal = Color(0xFF00C7FA);
 
+  static const Color skeleton = Color(0xFFF8F9F9);
+  static const Color skeletonEscuro = Color(0xFF181A20);
+
   static const Color statusBar = Color(0xffffffff);
   static const Color statusBarEscuro = Color(0xFF1F222A);
 
