@@ -55,7 +55,7 @@ class _HistoriaButtonState extends State<HistoriaButton> {
                 height: UiTamanho.input,
                 decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.onPrimary,
-                  borderRadius: BorderRadius.circular(UiBorda.arredondada),
+                  borderRadius: BorderRadius.circular(UiBorda.circulo),
                 ),
                 child: Align(
                   alignment: Alignment.centerLeft,

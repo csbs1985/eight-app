@@ -56,7 +56,6 @@ class _HistoriaItemState extends State<HistoriaItem> {
                       widget._historia['titulo'],
                       style: Theme.of(context).textTheme.bodyLarge,
                     ),
-                    const SizedBox(height: UiEspaco.pequeno),
                     if (_historiaMap.isNotEmpty)
                       HistoriaInfoWidget(item: _historiaMap),
                     const SizedBox(height: UiEspaco.pequeno),
