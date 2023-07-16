@@ -10,6 +10,11 @@ class UiTexto {
 }
 
 class UiTextoClaro {
+  static const TextStyle bodyLarge = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.normal,
+    color: UiCor.texto,
+  );
   static const TextStyle bodyMedium = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,
@@ -38,6 +43,11 @@ class UiTextoClaro {
 }
 
 class UiTextoEscuro {
+  static const TextStyle bodyLarge = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.normal,
+    color: UiCor.textoEscuro,
+  );
   static const TextStyle bodyMedium = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,

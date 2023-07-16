@@ -1,11 +1,11 @@
 import 'dart:io';
-
 import 'package:eight_app/config/hive_config.dart';
 import 'package:eight_app/config/rotas_config.dart';
 import 'package:eight_app/theme/ui_tema.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,6 +13,8 @@ Future<void> main() async {
   await HiveConfig.start();
 
   await Firebase.initializeApp();
+
+  await initializeDateFormatting('pt_BR', null);
 
   SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],

@@ -1,5 +1,5 @@
 import 'package:eight_app/config/value_notifier_config.dart';
-import 'package:eight_app/firestore/historia_fistore.dart';
+import 'package:eight_app/firestore/historia_firestore.dart';
 import 'package:eight_app/service/categoria_service.dart';
 
 class HistoriaService {

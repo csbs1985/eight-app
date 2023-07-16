@@ -32,7 +32,7 @@ class _AvatarButtonState extends State<AvatarButton> {
     return GestureDetector(
       onTap: () => _onTap(),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(UiBorda.arredondada),
+        borderRadius: BorderRadius.circular(UiBorda.circulo),
         child: CachedNetworkImage(
           imageUrl: widget._avatar,
           width: widget._size ?? UiTamanho.avatar,
@@ -57,7 +57,7 @@ class _AvatarButtonState extends State<AvatarButton> {
       width: widget._size ?? UiTamanho.avatar,
       height: widget._size ?? UiTamanho.avatar,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(UiBorda.arredondada),
+        borderRadius: BorderRadius.circular(UiBorda.circulo),
         child: Image.asset(
           UiImagem.avatar,
           fit: BoxFit.cover,

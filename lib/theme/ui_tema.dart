@@ -44,12 +44,14 @@ class UiTema {
     ),
     dividerTheme: const DividerThemeData(
       color: UiCor.borda,
+      space: 0,
       thickness: 1,
     ),
     iconTheme: const IconThemeData(color: UiCor.icone),
     primaryColor: UiCor.principal,
     scaffoldBackgroundColor: UiCor.back,
     textTheme: const TextTheme(
+      bodyLarge: UiTextoClaro.bodyLarge,
       bodyMedium: UiTextoClaro.bodyMedium,
       bodySmall: UiTextoClaro.bodySmall,
       labelSmall: UiTextoClaro.labelSmall, // hint
@@ -74,11 +76,13 @@ class UiTema {
     ),
     dividerTheme: const DividerThemeData(
       color: UiCor.bordaEscura,
+      space: 0,
       thickness: 1,
     ),
     iconTheme: const IconThemeData(color: UiCor.iconeEscuro),
     scaffoldBackgroundColor: UiCor.backEscuro,
     textTheme: const TextTheme(
+      bodyLarge: UiTextoEscuro.bodyLarge,
       bodyMedium: UiTextoEscuro.bodyMedium,
       bodySmall: UiTextoEscuro.bodySmall,
       labelSmall: UiTextoEscuro.labelSmall, // hint

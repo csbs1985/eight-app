@@ -1,5 +1,7 @@
 const String CRIAR_BOTAO = "Escrever história...";
 
+const String EDITADO = "Editado";
+
 const String EIGHT = "Eight";
 
 const String ENTRAR_BEM_VINDO = "Seja bem vindo";

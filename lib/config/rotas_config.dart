@@ -1,4 +1,5 @@
 import 'package:eight_app/page/buscar_page.dart';
+import 'package:eight_app/page/historia_page.dart';
 import 'package:eight_app/page/menu_page.dart';
 import 'package:eight_app/page/notificacao_page.dart';
 import 'package:eight_app/page/perfil_page.dart';
@@ -40,6 +41,15 @@ final GoRouter routes = GoRouter(
         context: context,
         state: state,
         child: const EntrarPage(),
+      ),
+    ),
+    GoRoute(
+      name: RotasEnum.HISTORIA.value,
+      path: '/historia/:idHistoria',
+      pageBuilder: (context, state) => transicaoPaginas(
+        context: context,
+        state: state,
+        child: HistoriaPage(idHistoria: state.pathParameters['idHistoria']!),
       ),
     ),
     GoRoute(
