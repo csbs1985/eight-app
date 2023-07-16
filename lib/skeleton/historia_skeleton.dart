@@ -14,7 +14,16 @@ class HistoriaSkeleton extends StatelessWidget {
         children: [
           Container(
             width: 200,
-            height: 16,
+            height: 20,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(UiBorda.arredondada),
+              color: Theme.of(context).colorScheme.onBackground,
+            ),
+          ),
+          const SizedBox(height: UiEspaco.pequeno),
+          Container(
+            width: 250,
+            height: 12,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(UiBorda.arredondada),
               color: Theme.of(context).colorScheme.onBackground,
@@ -23,7 +32,7 @@ class HistoriaSkeleton extends StatelessWidget {
           const SizedBox(height: UiEspaco.pequeno),
           Container(
             width: double.infinity,
-            height: 16 * 3,
+            height: 16 * 5,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(UiBorda.arredondada),
               color: Theme.of(context).colorScheme.onBackground,
@@ -36,7 +45,7 @@ class HistoriaSkeleton extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 8),
                   child: Container(
-                    width: 20,
+                    width: 60,
                     height: 16,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(UiBorda.arredondada),

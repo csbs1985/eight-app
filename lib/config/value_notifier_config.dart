@@ -17,7 +17,7 @@ ValueNotifier<UsuarioModel> currentUsuario =
   email: '',
   idUsuario: '',
   dataRegistro: '',
-  nomeUsuario: '',
+  nomeUsuario: 'charles.sbs',
   situacaoConta: '',
   token: '',
   dataAtualizacaoNome: '',
