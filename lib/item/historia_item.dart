@@ -1,6 +1,5 @@
 import 'package:eight_app/service/categoria_service.dart';
 import 'package:eight_app/theme/ui_espaco.dart';
-import 'package:eight_app/widget/ellipsis_widget.dart';
 import 'package:flutter/material.dart';
 
 class HistoriaItem extends StatefulWidget {
@@ -31,7 +30,7 @@ class _HistoriaItemState extends State<HistoriaItem> {
             children: [
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.all(UiEspaco.grande),
+                padding: const EdgeInsets.all(UiEspaco.normal),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -41,7 +40,12 @@ class _HistoriaItemState extends State<HistoriaItem> {
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     const SizedBox(height: UiEspaco.pequeno),
-                    EllipsisText(texto: widget._historia['texto']),
+                    Text(
+                      widget._historia['texto'],
+                      maxLines: 10,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                     const SizedBox(height: UiEspaco.pequeno),
                     Wrap(
                       children: [
@@ -59,7 +63,7 @@ class _HistoriaItemState extends State<HistoriaItem> {
                   ],
                 ),
               ),
-              // const SeparadorWidget(),
+              const Divider(),
             ],
           ),
         );

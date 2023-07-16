@@ -1,5 +1,4 @@
 import 'package:eight_app/button/icone_button.dart';
-import 'package:eight_app/config/value_notifier_config.dart';
 import 'package:eight_app/service/rotas_service.dart';
 import 'package:eight_app/theme/ui_espaco.dart';
 import 'package:eight_app/theme/ui_icone.dart';
@@ -32,16 +31,10 @@ class _InicioAppBarState extends State<InicioAppBar> {
           GestureDetector(
             child: Align(
               alignment: Alignment.centerLeft,
-              child: ValueListenableBuilder(
-                valueListenable: currentTema,
-                builder: (context, Brightness tema, _) {
-                  bool isEscuro = tema == Brightness.dark ? true : false;
-
-                  return SvgPicture.asset(
-                    isEscuro ? UiIcone.eightEscuro : UiIcone.eight,
-                    height: 20,
-                  );
-                },
+              child: SvgPicture.asset(
+                UiIcone.eight,
+                height: 20,
+                color: Theme.of(context).iconTheme.color,
               ),
             ),
             onTap: () => widget._callback(),

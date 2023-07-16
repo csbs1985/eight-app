@@ -1,5 +1,4 @@
 import 'package:eight_app/config/texto_config.dart';
-import 'package:eight_app/config/value_notifier_config.dart';
 import 'package:eight_app/service/auth_service.dart';
 import 'package:eight_app/theme/ui_borda.dart';
 import 'package:eight_app/theme/ui_icone.dart';
@@ -49,16 +48,10 @@ class _EntrarPageState extends State<EntrarPage> {
           children: [
             const SizedBox(height: UiEspaco.normal),
             Expanded(
-              child: ValueListenableBuilder(
-                valueListenable: currentTema,
-                builder: (context, Brightness tema, _) {
-                  bool isEscuro = tema == Brightness.dark ? true : false;
-
-                  return SvgPicture.asset(
-                    isEscuro ? UiIcone.eightEscuro : UiIcone.eight,
-                    width: MediaQuery.sizeOf(context).width / 2.5,
-                  );
-                },
+              child: SvgPicture.asset(
+                width: MediaQuery.sizeOf(context).width / 2.5,
+                UiIcone.eight,
+                color: Theme.of(context).iconTheme.color,
               ),
             ),
             Text(

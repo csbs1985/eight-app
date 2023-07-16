@@ -42,6 +42,10 @@ class UiTema {
       onTertiary: UiCor.texto, // texto
       onBackground: UiCor.skeleton, //skeleton
     ),
+    dividerTheme: const DividerThemeData(
+      color: UiCor.borda,
+      thickness: 1,
+    ),
     iconTheme: const IconThemeData(color: UiCor.icone),
     primaryColor: UiCor.principal,
     scaffoldBackgroundColor: UiCor.back,
@@ -67,6 +71,10 @@ class UiTema {
       onSecondary: UiCor.bordaEscura, // borda
       onTertiary: UiCor.textoEscuro, // texto
       onBackground: UiCor.skeletonEscuro, //skeleton
+    ),
+    dividerTheme: const DividerThemeData(
+      color: UiCor.bordaEscura,
+      thickness: 1,
     ),
     iconTheme: const IconThemeData(color: UiCor.iconeEscuro),
     scaffoldBackgroundColor: UiCor.backEscuro,
