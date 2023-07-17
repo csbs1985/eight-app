@@ -12,7 +12,7 @@ class TituloItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16),
-      child: Text(texto),
+      child: Text(texto, style: Theme.of(context).textTheme.titleLarge),
     );
   }
 }

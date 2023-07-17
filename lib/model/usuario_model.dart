@@ -4,6 +4,7 @@ class UsuarioModel {
   late String email;
   late String idUsuario;
   late String dataRegistro;
+  late String nome;
   late String nomeUsuario;
   late String token;
   late String dataAtualizacaoNome;
@@ -23,6 +24,7 @@ class UsuarioModel {
     required this.email,
     required this.idUsuario,
     required this.dataRegistro,
+    required this.nome,
     required this.nomeUsuario,
     required this.token,
     required this.dataAtualizacaoNome,
