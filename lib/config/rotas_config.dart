@@ -1,4 +1,5 @@
 import 'package:eight_app/page/buscar_page.dart';
+import 'package:eight_app/page/doar_page.dart';
 import 'package:eight_app/page/historia_page.dart';
 import 'package:eight_app/page/menu_page.dart';
 import 'package:eight_app/page/notificacao_page.dart';
@@ -41,6 +42,14 @@ final GoRouter routes = GoRouter(
         context: context,
         state: state,
         child: const EntrarPage(),
+      ),
+    ),
+    GoRoute(
+      path: RotasEnum.DOAR.value,
+      pageBuilder: (context, state) => transicaoPaginas(
+        context: context,
+        state: state,
+        child: const DoarPage(),
       ),
     ),
     GoRoute(

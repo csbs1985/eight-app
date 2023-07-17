@@ -25,6 +25,7 @@ CustomTransitionPage transicaoPaginas<T>({
 enum RotasEnum {
   BUSCAR('/buscar'),
   ENTRAR('/entrar'),
+  DOAR('/doar'),
   HISTORIA('historia'),
   INICIO('/inicio'),
   MENU('/menu'),

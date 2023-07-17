@@ -3,7 +3,9 @@ import 'package:eight_app/button/item_button.dart';
 import 'package:eight_app/config/texto_config.dart';
 import 'package:eight_app/config/value_notifier_config.dart';
 import 'package:eight_app/item/titulo_item.dart';
+import 'package:eight_app/service/rotas_service.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -56,7 +58,7 @@ class BuscarhPageState extends State<MenuPage> {
             const Divider(),
             const TituloItem(texto: APLICACAO),
             ItemButton(
-              callback: () => {},
+              callback: () => context.push(RotasEnum.DOAR.value),
               icone: Icons.favorite_border_outlined,
               titulo: DOAR,
               texto: DOAR_DESCRICAO,

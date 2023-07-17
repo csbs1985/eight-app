@@ -10,6 +10,9 @@ class UiCor {
   static const Color borda = Color(0xFFEFEFEF);
   static const Color bordaEscura = Color(0xFF181A20);
 
+  static const Color primeiroBotao = Color(0xFF00C7FA);
+  static const Color primeiroBotaoAtivo = Color(0x9000C7FA);
+
   static const Color hint = Color(0xFF737373);
   static const Color hintEscuro = Color(0x90ffffff);
 
