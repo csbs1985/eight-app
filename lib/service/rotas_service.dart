@@ -30,7 +30,10 @@ enum RotasEnum {
   INICIO('/inicio'),
   MENU('/menu'),
   NOTIFICACAO('notificacao'),
-  PERFIL('perfil');
+  PERFIL('perfil'),
+  PERGUNTA('/pergunta'),
+  POLITICA('/politica'),
+  TERMO('/termo');
 
   final String value;
   const RotasEnum(this.value);

@@ -4,6 +4,9 @@ import 'package:eight_app/page/historia_page.dart';
 import 'package:eight_app/page/menu_page.dart';
 import 'package:eight_app/page/notificacao_page.dart';
 import 'package:eight_app/page/perfil_page.dart';
+import 'package:eight_app/page/pergunta_page.dart';
+import 'package:eight_app/page/politica_page.dart';
+import 'package:eight_app/page/termo_page.dart';
 import 'package:eight_app/service/auth_service.dart';
 import 'package:eight_app/service/rotas_service.dart';
 import 'package:eight_app/page/entrar_page.dart';
@@ -93,6 +96,30 @@ final GoRouter routes = GoRouter(
         context: context,
         state: state,
         child: PerfilPage(idUsuario: state.pathParameters['idUsuario']!),
+      ),
+    ),
+    GoRoute(
+      path: RotasEnum.PERGUNTA.value,
+      pageBuilder: (context, state) => transicaoPaginas(
+        context: context,
+        state: state,
+        child: const PerguntaPage(),
+      ),
+    ),
+    GoRoute(
+      path: RotasEnum.POLITICA.value,
+      pageBuilder: (context, state) => transicaoPaginas(
+        context: context,
+        state: state,
+        child: const PoliticaPage(),
+      ),
+    ),
+    GoRoute(
+      path: RotasEnum.TERMO.value,
+      pageBuilder: (context, state) => transicaoPaginas(
+        context: context,
+        state: state,
+        child: const TermoPage(),
       ),
     ),
   ],

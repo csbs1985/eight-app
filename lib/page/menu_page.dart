@@ -64,22 +64,22 @@ class BuscarhPageState extends State<MenuPage> {
               texto: DOAR_DESCRICAO,
             ),
             ItemButton(
-              callback: () => {},
+              callback: () => context.push(RotasEnum.TERMO.value),
               icone: Icons.description_outlined,
               titulo: TERMO,
               texto: TERMO_DESCRICAO,
             ),
             ItemButton(
-              callback: () => {},
-              icone: Icons.help_outline_outlined,
-              titulo: PERGUNTAS,
-              texto: PERGUNTAS_DESCRICAO,
-            ),
-            ItemButton(
-              callback: () => {},
+              callback: () => context.push(RotasEnum.POLITICA.value),
               icone: Icons.verified_user_outlined,
               titulo: POLITICA,
               texto: POLITICA_DESCRICAO,
+            ),
+            ItemButton(
+              callback: () => context.push(RotasEnum.PERGUNTA.value),
+              icone: Icons.help_outline_outlined,
+              titulo: PERGUNTAS,
+              texto: PERGUNTAS_DESCRICAO,
             ),
             ItemButton(
               callback: () => {},

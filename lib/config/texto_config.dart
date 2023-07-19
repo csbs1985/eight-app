@@ -56,6 +56,23 @@ const String PERFIL_DESCRICAO = "Veja seu perfil e histórias";
 const String POLITICA = "Política de privacidade";
 const String POLITICA_DESCRICAO =
     "É o documento que descreve como uma organização coleta, usa e protege as informações pessoais dos seus usuários.";
+const String POLITICA_PRIVACIDADE =
+    'A sua privacidade é fundamental para nós. Nossa política de privacidade detalha como coletamos, utilizamos, compartilhamos e protegemos os dados dos usuários do aplicativo Eight. Ao utilizar nossa plataforma, você concorda com esta política: \n\n'
+    'Coleta de Dados \n\n'
+    'O Eight coleta informações fornecidas pelos usuários durante o processo de registro e utilização do aplicativo. Essas informações podem incluir, mas não estão limitadas a: nome de usuário, endereço de e-mail e histórias compartilhadas. \n\n'
+    'Uso dos Dados \n\n'
+    'As informações coletadas têm a finalidade exclusiva de permitir o funcionamento adequado do Eight e melhorar a experiência do usuário. Não utilizamos seus dados pessoais para fins de publicidade, nem os divulgamos ou vendemos a terceiros. \n\n'
+    'Anonimato e Comentários \n\n'
+    'As histórias e comentários compartilhados no Eight podem ser anônimas, mas realizamos rastreamento que possa identificar a origem dessas postagens e comentários. \n\n'
+    'Segurança dos Dados \n\n'
+    'Empregamos medidas de segurança adequadas para proteger os dados dos usuários contra acesso não autorizado, alteração, divulgação ou destruição. No entanto, nenhuma transmissão de dados pela internet é 100% segura, e não podemos garantir a segurança absoluta dos dados. \n\n'
+    'Exclusão de Conteúdo \n\n'
+    'Os usuários têm a opção de excluir suas histórias e comentários a qualquer momento. Caso optem por excluir seu conteúdo, este será removido permanentemente da plataforma. \n\n'
+    'Alterações na Política de Privacidade \n\n'
+    'Reservamos o direito de modificar nossa política de privacidade a qualquer momento. Quaisquer alterações significativas serão informadas aos usuários com antecedência razoável. \n\n'
+    'Contato \n\n'
+    'Caso tenha dúvidas ou precise de esclarecimentos sobre nossa política de privacidade, entre em contato conosco através do seguinte endereço de e-mail: privacidade@eight.com. \n\n'
+    'Ao utilizar o Eight, você concorda com os termos e condições estabelecidos no Termo de Uso e na Política de Privacidade.';
 
 const String POR = "por Charles Santos • v";
 
@@ -72,6 +89,26 @@ const String SOBRE_DESCRICAO = "Onde fornecemos informações sobre o Eight.";
 const String TERMO = "Termo de uso";
 const String TERMO_DESCRICAO =
     "Onde estabelecemos as regras, direitos e responsabilidades de uso de nosso serviço.";
+const String TERMO_USO =
+    'Bem-vindo(a) ao Eight! Ao utilizar nossa plataforma, você concorda com os seguintes termos e condições: \n\n'
+    'Aceitação dos Termos\n\n'
+    'Ao acessar ou usar o aplicativo Eight, você concorda integralmente com estes termos de uso, bem como com a política de privacidade. Se você não concordar com estes termos, por favor, não utilize o serviço.\n\n'
+    'Propósito da Plataforma \n\n'
+    'O Eight é uma rede social destinada a compartilhar histórias e comentários anônimos e não anônimos. Nosso objetivo é proporcionar um espaço seguro e acolhedor para que os usuários possam expressar suas experiências e ideias livremente.\n\n'
+    'Privacidade dos Dados\n\n'
+    'Garantimos que os dados dos usuários serão mantidos de forma sigilosa e não serão divulgados, vendidos ou compartilhados com terceiros sem o consentimento expresso do usuário, exceto quando exigido por lei.\n\n'
+    'Ausência de Publicidade e Cobrança pelo Uso\n\n'
+    'O Eight não utiliza publicidade em sua plataforma e não cobramos qualquer valor pelo uso da rede social. Nosso serviço é totalmente gratuito para os usuários.\n\n'
+    'Conteúdo Permitido\n\n'
+    'É permitido compartilhar histórias e comentários anônimos no Eight. No entanto, não é possível postar imagens e vídeos na plataforma.\n\n'
+    'Anonimato e Responsabilidade pelo Conteúdo\n\n'
+    'Entendemos que o anonimato é essencial para encorajar a livre expressão. No entanto, ressaltamos que os usuários são totalmente responsáveis pelo conteúdo que compartilham no Eight. Não nos responsabilizamos pelo teor das histórias e comentários postados por usuários.\n\n'
+    'Uso esponsável\n\n'
+    'Ao utilizar o Eight, você concorda em não compartilhar conteúdo difamatório, discriminatório, ilegal, ameaçador, obsceno, ou que viole quaisquer leis ou direitos de terceiros. O não cumprimento desta norma poderá resultar no bloqueio ou exclusão do usuário.\n\n'
+    'Modificações nos Termos de Uso\n\n'
+    'Reservamos o direito de modificar estes termos de uso a qualquer momento. Caso ocorram mudanças significativas, informaremos os usuários com antecedência razoável. O uso contínuo do aplicativo após tais modificações representa a sua concordância com os termos atualizados.\n\n'
+    'Contato\n\n'
+    'Em caso de dúvidas ou questões relacionadas aos termos de uso, entre em contato conosco através do seguinte endereço de e-mail: contato@eight.com.';
 
 const String USUARIO_EDITAR = "Editar perfil";
 const String USUARIO_EDITAR_DESCRICAO = "Editar perfil";
